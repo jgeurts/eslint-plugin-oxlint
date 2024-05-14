@@ -10,6 +10,7 @@ const eslintRules = {
   "for-direction": "off",
   "getter-return": "off",
   "guard-for-in": "off",
+  "max-classes-per-file": "off",
   "max-lines": "off",
   "max-params": "off",
   "no-ternary": "off",
@@ -37,6 +38,7 @@ const eslintRules = {
   "no-duplicate-case": "off",
   "no-empty": "off",
   "no-empty-character-class": "off",
+  "no-empty-function": "off",
   "no-empty-pattern": "off",
   "no-empty-static-block": "off",
   "no-eval": "off",
@@ -51,8 +53,6 @@ const eslintRules = {
   "no-irregular-whitespace": "off",
   "no-iterator": "off",
   "no-loss-of-precision": "off",
-  "no-mixed-operators": "off",
-  "no-new-symbol": "off",
   "no-new-wrappers": "off",
   "no-nonoctal-decimal-escape": "off",
   "no-obj-calls": "off",
@@ -60,7 +60,6 @@ const eslintRules = {
   "no-prototype-builtins": "off",
   "no-redeclare": "off",
   "no-regex-spaces": "off",
-  "no-return-await": "off",
   "no-script-url": "off",
   "no-self-assign": "off",
   "no-self-compare": "off",
@@ -79,9 +78,13 @@ const eslintRules = {
   "no-var": "off",
   "no-void": "off",
   "no-with": "off",
+  "radix": "off",
   "require-yield": "off",
+  "unicode-bom": "off",
   "use-isnan": "off",
-  "valid-typeof": "off"
+  "valid-typeof": "off",
+  "no-await-in-loop": "off",
+  "no-new-native-nonconstructor": "off"
 }
 
 
@@ -90,7 +93,9 @@ const typescriptRules = {
   "@typescript-eslint/array-type": "off",
   "@typescript-eslint/ban-ts-comment": "off",
   "@typescript-eslint/ban-tslint-comment": "off",
+  "@typescript-eslint/prefer-enum-initializers": "off",
   "@typescript-eslint/ban-types": "off",
+  "@typescript-eslint/consistent-type-definitions": "off",
   "@typescript-eslint/no-duplicate-enum-values": "off",
   "@typescript-eslint/no-empty-interface": "off",
   "@typescript-eslint/no-explicit-any": "off",
@@ -106,7 +111,8 @@ const typescriptRules = {
   "@typescript-eslint/prefer-for-of": "off",
   "@typescript-eslint/prefer-function-type": "off",
   "@typescript-eslint/prefer-ts-expect-error": "off",
-  "@typescript-eslint/triple-slash-reference": "off"
+  "@typescript-eslint/triple-slash-reference": "off",
+  "@typescript-eslint/prefer-literal-enum-member": "off"
 }
 
 
@@ -137,6 +143,7 @@ const jestRules = {
   "jest/prefer-comparison-matcher": "off",
   "jest/prefer-equality-matcher": "off",
   "jest/prefer-expect-resolves": "off",
+  "jest/prefer-lowercase-title": "off",
   "jest/prefer-mock-promise-shorthand": "off",
   "jest/prefer-spy-on": "off",
   "jest/prefer-strict-equal": "off",
@@ -144,6 +151,7 @@ const jestRules = {
   "jest/prefer-to-contain": "off",
   "jest/prefer-to-have-length": "off",
   "jest/prefer-todo": "off",
+  "jest/require-hook": "off",
   "jest/require-to-throw-message": "off",
   "jest/valid-describe-callback": "off",
   "jest/valid-expect": "off",
@@ -153,7 +161,6 @@ const jestRules = {
 
 const unicornRules = {
   "unicorn/catch-error-name": "off",
-  "unicorn/prefer-node-protocol": "off",
   "unicorn/empty-brace-spaces": "off",
   "unicorn/error-message": "off",
   "unicorn/escape-case": "off",
@@ -161,9 +168,11 @@ const unicornRules = {
   "unicorn/filename-case": "off",
   "unicorn/new-for-builtins": "off",
   "unicorn/no-abusive-eslint-disable": "off",
-  "unicorn/no-array-reduce": "off",
+  "unicorn/no-anonymous-default-export": "off",
   "unicorn/no-array-for-each": "off",
+  "unicorn/no-array-reduce": "off",
   "unicorn/no-await-expression-member": "off",
+  "unicorn/no-await-in-promise-methods": "off",
   "unicorn/no-console-spaces": "off",
   "unicorn/no-document-cookie": "off",
   "unicorn/no-empty-file": "off",
@@ -178,6 +187,7 @@ const unicornRules = {
   "unicorn/no-null": "off",
   "unicorn/no-object-as-default-parameter": "off",
   "unicorn/no-process-exit": "off",
+  "unicorn/no-single-promise-in-promise-methods": "off",
   "unicorn/no-static-only-class": "off",
   "unicorn/no-thenable": "off",
   "unicorn/no-this-assignment": "off",
@@ -188,6 +198,7 @@ const unicornRules = {
   "unicorn/no-useless-fallback-in-spread": "off",
   "unicorn/no-useless-length-check": "off",
   "unicorn/no-useless-promise-resolve-reject": "off",
+  "unicorn/no-useless-spread": "off",
   "unicorn/no-useless-switch-case": "off",
   "unicorn/no-zero-fractions": "off",
   "unicorn/number-literal-case": "off",
@@ -199,6 +210,7 @@ const unicornRules = {
   "unicorn/prefer-blob-reading-methods": "off",
   "unicorn/prefer-code-point": "off",
   "unicorn/prefer-date-now": "off",
+  "unicorn/prefer-node-protocol": "off",
   "unicorn/prefer-dom-node-append": "off",
   "unicorn/prefer-dom-node-dataset": "off",
   "unicorn/prefer-dom-node-remove": "off",
@@ -210,7 +222,6 @@ const unicornRules = {
   "unicorn/prefer-modern-dom-apis": "off",
   "unicorn/prefer-modern-math-apis": "off",
   "unicorn/prefer-native-coercion-functions": "off",
-  "unicorn/no-useless-spread": "off",
   "unicorn/prefer-number-properties": "off",
   "unicorn/prefer-optional-catch-binding": "off",
   "unicorn/prefer-prototype-methods": "off",
@@ -252,6 +263,7 @@ const reactRules = {
   "react/no-is-mounted": "off",
   "react/no-unknown-property": "off",
   "react/require-render-return": "off",
+  "react/rules-of-hooks": "off",
   "react/void-dom-elements-no-children": "off"
 }
 
@@ -271,14 +283,13 @@ const importRules = {
   "import/namespace": "off",
   "import/no-amd": "off",
   "import/no-cycle": "off",
-  "import/no-deprecated": "off",
   "import/no-named-as-default": "off",
   "import/no-named-as-default-member": "off",
   "import/no-self-import": "off",
-  "import/no-unresolved": "off",
-  "import/no-unused-modules": "off",
   "import/no-duplicates": "off",
-  "import/no-default-export": "off"
+  "import/no-default-export": "off",
+  "import/no-deprecated": "off",
+  "import/no-unused-modules": "off"
 }
 
 
@@ -322,6 +333,7 @@ const nextjsRules = {
   "nextjs/no-css-tags": "off",
   "nextjs/no-head-element": "off",
   "nextjs/no-head-import-in-document": "off",
+  "nextjs/no-duplicate-head": "off",
   "nextjs/no-img-element": "off",
   "nextjs/no-script-component-in-head": "off",
   "nextjs/no-sync-scripts": "off",
@@ -329,13 +341,24 @@ const nextjsRules = {
   "nextjs/no-typos": "off",
   "nextjs/no-document-import-in-page": "off",
   "nextjs/no-unwanted-polyfillio": "off",
-  "nextjs/no-before-interactive-script-outside-document": "off"
+  "nextjs/no-before-interactive-script-outside-document": "off",
+  "nextjs/no-page-custom-font": "off",
+  "nextjs/no-styled-jsx-in-document": "off"
 }
 
 
 const jsdocRules = {
   "jsdoc/check-access": "off",
-  "jsdoc/empty-tags": "off"
+  "jsdoc/check-property-names": "off",
+  "jsdoc/check-tag-names": "off",
+  "jsdoc/empty-tags": "off",
+  "jsdoc/implements-on-classes": "off",
+  "jsdoc/no-defaults": "off",
+  "jsdoc/require-property": "off",
+  "jsdoc/require-property-type": "off",
+  "jsdoc/require-property-name": "off",
+  "jsdoc/require-property-description": "off",
+  "jsdoc/require-yields": "off"
 }
 
 
@@ -351,6 +374,7 @@ module.exports = {
   reactRules,
   reactPerfRules,
   importRules,
+  // importRules,
   jsxA11yRules,
   nextjsRules,
   jsdocRules,
